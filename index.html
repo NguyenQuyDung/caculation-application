@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Nguyễn Qúy Dũng</title>
+</head>
+
+<body>
+    <div class="container">
+        <img class="img" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/IPhone_X.png" alt="">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="output">
+            <button onclick="Cler()">CL</button>
+            <button onclick="del()">DEL</button>
+            <button onclick="display_number('%')">%</button>
+            <button onclick="display_number('/')">/</button>
+            <button onclick="display_number('7')">7</button>
+            <button onclick="display_number('8')">8</button>
+            <button onclick="display_number('9')">9</button>
+            <button onclick="display_number('*')">*</button>
+            <button onclick="display_number('4')">4</button>
+            <button onclick="display_number('5')">5</button>
+            <button onclick="display_number('6')">6</button>
+            <button onclick="display_number('-')">-</button>
+            <button onclick="display_number('1')">1</button>
+            <button onclick="display_number('2')">2</button>
+            <button onclick="display_number('3')">3</button>
+            <button onclick="display_number('+')">+</button>
+            <button onclick="display_number('.')">.</button>
+            <button onclick="display_number('0')">0</button>
+            <button onclick="Calculate()" class="equal">=</button>
+        </div>
+        <div class="footer">
+            <i class="bi bi-house-heart"></i>
+            <i class="bi bi-browser-chrome"></i>
+            <i class="bi bi-alarm"></i>
+            <i class="bi bi-bag-heart"></i>
+            <i class="bi bi-calendar-heart"></i>
+            <i class="bi bi-cloud-lightning-rain"></i>
+            <i class="bi bi-google-play"></i>
+        </div>
+    </div>
+    <script>
+        var output_screeen = document.getElementById("output");
+
+        function display_number(num) {
+            output_screeen.value += num;
+        }
+
+        function Calculate() {
+            try {
+                output_screeen.value = eval(output_screeen.value);
+            } catch (error) {
+                alert(error);
+            }
+        }
+
+        function Cler() {
+            output_screeen.value = "";
+        }
+
+        function del() {
+            output_screeen.value = output_screeen.value.slice(-0, -1);
+        }
+    </script>
+</body>
+
+</html>
+
+</html>

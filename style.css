@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #ecf0f3;
+    font-family: sans-serif;
+    outline: none;
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    background-color: #ecf0f3;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #fff, 5px 5px 12px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: repeat(3, 68px);
+    position: absolute;
+    z-index: 1;
+    height: 530px;
+    top: 68px;
+}
+
+input {
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    box-shadow: inset -5px -5px 12px #fff, inset 5px 5px 12px rgba(0, 0, 0, .16);
+    background-color: #ecf0f3;
+    border: 5px dotted #23c6d1;
+    border-radius: 30px;
+    color: rbg(70, 70, 70);
+    font-size: 58px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+button {
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #fff, 5px 5px 12px rgba(0, 0, 0, .16);
+    border: 5px dotted #23c6d1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.equal {
+    width: 115px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #fff, 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+.img {
+    position: relative;
+    z-index: 0;
+    height: 640px;
+    width: 350px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 80px;
+    border-radius: 30px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #fff, 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+.footer i {
+    font-size: 18px;
+    padding: 10px 10px;
+    color: brown;
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #fff, 5px 5px 12px rgba(0, 0, 0, .16);
+    transition: 0.8s;
+    display: inline-flex;
+}
+
+.footer i:hover {
+    background-color: #fe781a;
+    transform: rotate(360deg);
+    border: 5px dotted #e9dee8;
+    cursor: pointer;
+    color: white;
+}
